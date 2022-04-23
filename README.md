@@ -8,5 +8,5 @@ All textures are original, created in Photopea.
 All Java class files and JSON files are original, programmed using Visual Studio Code.  
 
 **Note**  
-All Java code can be found in src/main/java/wjmack/wjs/weapons.  
-See src/main/java/wjmack/wjs/weapons/items for the majority of Java code.
+All Java code can be found in <a href="https://github.com/wjmack/WJs-Weapons/tree/master/src/main/java/wjmack/wjs/weapons">src/main/java/wjmack/wjs/weapons</a>.  
+See <a href="https://github.com/wjmack/WJs-Weapons/tree/master/src/main/java/wjmack/wjs/weapons/items">src/main/java/wjmack/wjs/weapons/items</a> for the majority of Java code.
