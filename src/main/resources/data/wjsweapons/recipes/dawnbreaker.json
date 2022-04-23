@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " g ",
+        "gRg",
+        " / "
+    ],
+    "key": {
+        "g": {
+            "item": "minecraft:gold_ingot"
+        },
+        "R": {
+            "item": "minecraft:rotten_flesh"
+        },
+        "/": {
+            "item": "minecraft:blaze_rod"
+        }
+    },
+    "result": {
+        "item": "wjsweapons:dawnbreaker",
+        "count": 1
+    }
+}

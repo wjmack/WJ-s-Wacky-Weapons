@@ -1,0 +1,29 @@
+{
+    "bonk": {
+      "sounds": [
+        "wjsweapons:bonk"
+      ]
+    },
+    "rocket": {
+      "sounds": [
+        "wjsweapons:boots"
+      ]
+    },
+    "canaan": {
+      "sounds": [
+        "wjsweapons:canaan_1",
+        "wjsweapons:canaan_2",
+        "wjsweapons:canaan_3",
+        "wjsweapons:canaan_4",
+        "wjsweapons:canaan_5",
+        "wjsweapons:canaan_6",
+        "wjsweapons:canaan_7",
+        "wjsweapons:canaan_8",
+        "wjsweapons:canaan_9",
+        "wjsweapons:canaan_10",
+        "wjsweapons:canaan_11",
+        "wjsweapons:canaan_12",
+        "wjsweapons:canaan_13"
+      ]
+    }
+  }

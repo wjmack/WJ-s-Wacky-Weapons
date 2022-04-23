@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "id": "wjsweapons",
+  "version": "${version}",
+
+  "name": "WJ's Wacky Weapons",
+  "description": "There are some cool weapons in here I suppose.",
+  "authors": [
+    "wjmack"
+  ],
+  "contact": {
+    "homepage": "https://twitter.com/wjmackintosh",
+    "sources": ""
+  },
+
+  "license": "CC0-1.0",
+  "icon": "assets/wjsweapons/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "wjmack.wjs.weapons.WJsWackyWeapons"
+    ],
+    "client" :
+    [
+      "wjmack.wjs.weapons.WWWClient"
+    ],
+    "cardinal-components": [
+      "wjmack.wjs.weapons.components.InitComponent"
+    ]
+  },
+  "mixins": [
+    "wjsweapons.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.11.3",
+    "fabric": "*",
+    "minecraft": "1.18.x",
+    "java": ">=17"
+  },
+  "suggests": {
+    "another-mod": "*"
+  },
+  "custom": {
+    "cardinal-components": [
+        "wjsweapons:energy"
+    ]
+}
+}

@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:smithing",
+    "base": {
+        "item": "minecraft:diamond_pickaxe"
+    },
+    "addition": {
+        "item": "wjsweapons:flamin_hot_pickaxe"
+    },
+    "result": {
+        "item": "wjsweapons:flamin_hot_pickaxe"
+    }
+}

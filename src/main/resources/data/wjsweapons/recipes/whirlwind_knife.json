@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#",
+        "D",
+        "/"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:ender_pearl"
+        },
+        "D": {
+            "item": "minecraft:diamond"
+        },
+        "/": {
+            "item": "minecraft:blaze_rod"
+        }
+    },
+    "result": {
+        "item": "wjsweapons:whirlwind_knife",
+        "count": 1
+    }
+}

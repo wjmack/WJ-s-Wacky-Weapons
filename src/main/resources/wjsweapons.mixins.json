@@ -1,0 +1,19 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "wjmack.wjs.weapons.mixin",
+  "compatibilityLevel": "JAVA_16",
+  "mixins": [
+  ],
+  "client": [
+    "PlayerEntityMixin",
+    "ServerPlayerEntityMixin"
+  ],
+  "server": [
+    "PlayerEntityMixin",
+    "ServerPlayerEntityMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

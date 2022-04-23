@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "#o#",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:gravel"
+        },
+        "o": {
+            "item": "minecraft:note_block"
+        }
+    },
+    "result": {
+        "item": "wjsweapons:canaan_block",
+        "count": 1
+    }
+}

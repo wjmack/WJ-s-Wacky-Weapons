@@ -1,0 +1,6 @@
+{
+    "parent": "item/handheld",
+    "textures": {
+      "layer0": "wjsweapons:item/flamin_hot_pickaxe"
+    }
+  }

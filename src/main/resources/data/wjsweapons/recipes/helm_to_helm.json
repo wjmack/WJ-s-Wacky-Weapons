@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:smithing",
+    "base": {
+        "item": "minecraft:diamond_helmet"
+    },
+    "addition": {
+        "item": "wjsweapons:guard_helmet"
+    },
+    "result": {
+        "item": "wjsweapons:guard_helmet"
+    }
+}
