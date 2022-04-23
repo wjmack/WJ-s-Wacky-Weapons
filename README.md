@@ -1,4 +1,4 @@
-# WJ-s-Wacky-Weapons
+# WJs-Weapons
 **Description**  
 A Minecraft 1.18.1 mod that adds a variety of weapons with different abilities, created using the Fabric API.  
 
