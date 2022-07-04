@@ -1,6 +1,8 @@
 package wjmack.wjs.weapons.mixin;
 
 import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.network.ServerPlayNetworkHandler;
 import net.minecraft.server.network.ServerPlayerEntity;
@@ -24,8 +26,9 @@ public abstract class ServerPlayerEntityMixin {
 
         // Stacks for checking purposes
         ItemStack equippedStack = player.getEquippedStack(EquipmentSlot.MAINHAND);
+        ItemStack feetStack = player.getEquippedStack(EquipmentSlot.FEET);
 
-        if (player.hasNoGravity() || equippedStack.getItem().equals(WJsWackyWeapons.WHIRLWIND_KNIFE)) {
+        if (player.hasNoGravity() || equippedStack.getItem().equals(WJsWackyWeapons.WHIRLWIND_KNIFE) || (feetStack.getItem().equals(WJsWackyWeapons.ROCKET_BOOTS)) && ((LivingEntity) player).airStrafingSpeed == 0.02) {
             player.handleFall(0, true);
         }
     }
