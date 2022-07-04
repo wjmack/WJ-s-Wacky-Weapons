@@ -106,29 +106,4 @@ public class WJsWackyWeapons implements ModInitializer {
 			}
 		}));
 	}
-
-	private void renderOverlay(Identifier texture, float opacity) {
-		int scaledHeight = MinecraftClient.getInstance().getWindow().getScaledHeight();
-		int scaledWidth = MinecraftClient.getInstance().getWindow().getScaledWidth();
-		RenderSystem.disableDepthTest();
-		RenderSystem.depthMask(false);
-		RenderSystem.defaultBlendFunc();
-		RenderSystem.setShader(GameRenderer::getPositionTexShader);
-		// This is the line that determines the opacity
-		RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, opacity);
-		// This is the line that assigns the texture
-		RenderSystem.setShaderTexture(0, texture);
-		Tessellator tessellator = Tessellator.getInstance();
-		BufferBuilder bufferBuilder = tessellator.getBuffer();
-		bufferBuilder.begin(DrawMode.QUADS, VertexFormats.POSITION_TEXTURE);
-		bufferBuilder.vertex(0.0D, scaledHeight, -90.0D).texture(0.0F, 1.0F).next();
-		bufferBuilder.vertex(scaledWidth, scaledHeight, -90.0D).texture(1.0F, 1.0F).next();
-		bufferBuilder.vertex(scaledWidth, 0.0D, -90.0D).texture(1.0F, 0.0F).next();
-		bufferBuilder.vertex(0.0D, 0.0D, -90.0D).texture(0.0F, 0.0F).next();
-		tessellator.draw();
-		RenderSystem.depthMask(true);
-		RenderSystem.enableDepthTest();
-		RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
-	}
-
 }
