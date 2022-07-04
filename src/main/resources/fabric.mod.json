@@ -20,13 +20,6 @@
   "entrypoints": {
     "main": [
       "wjmack.wjs.weapons.WJsWackyWeapons"
-    ],
-    "client" :
-    [
-      "wjmack.wjs.weapons.WWWClient"
-    ],
-    "cardinal-components": [
-      "wjmack.wjs.weapons.components.InitComponent"
     ]
   },
   "mixins": [
