@@ -22,9 +22,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.block.BlockState;
 import net.minecraft.client.item.TooltipContext;
-import net.minecraft.text.LiteralText;
 import net.minecraft.text.Text;
-import net.minecraft.text.TranslatableText;
 
 public class FlaminHotPick extends PickaxeItem {
 
@@ -35,10 +33,10 @@ public class FlaminHotPick extends PickaxeItem {
     @Override
     public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
         super.appendTooltip(stack, world, tooltip, context);
-        tooltip.add(new TranslatableText("item.wjsweapons.fhp_subtext_1").formatted(Formatting.GRAY));
-        tooltip.add(new TranslatableText("item.wjsweapons.fhp_subtext_2").formatted(Formatting.GRAY));
-        tooltip.add(new TranslatableText("item.wjsweapons.fhp_subtext_3").formatted(Formatting.GRAY));
-        tooltip.add(new TranslatableText("item.wjsweapons.fhp_subtext_4").formatted(Formatting.GRAY));
+        tooltip.add(Text.translatable("item.wjsweapons.fhp_subtext_1").formatted(Formatting.GRAY));
+        tooltip.add(Text.translatable("item.wjsweapons.fhp_subtext_2").formatted(Formatting.GRAY));
+        tooltip.add(Text.translatable("item.wjsweapons.fhp_subtext_3").formatted(Formatting.GRAY));
+        tooltip.add(Text.translatable("item.wjsweapons.fhp_subtext_4").formatted(Formatting.GRAY));
     }
 
     @Override
@@ -66,7 +64,7 @@ public class FlaminHotPick extends PickaxeItem {
             ((PlayerEntity) miner).giveItemStack(new ItemStack(Items.DIAMOND, howMany));
             ((PlayerEntity) miner)
                     .sendMessage(
-                            new LiteralText(
+                            Text.literal(
                                     "That block dropped " + howMany + " diamond" + (howMany == 1 ? "." : "s.")),
                             true);
             miner.playSound(SoundEvents.ENTITY_ARROW_HIT_PLAYER, 1.0F, 1.0F);

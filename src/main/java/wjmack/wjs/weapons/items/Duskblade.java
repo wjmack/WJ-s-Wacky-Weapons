@@ -19,7 +19,6 @@ import net.minecraft.world.World;
 
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.text.Text;
-import net.minecraft.text.TranslatableText;
 
 public class Duskblade extends SwordItem {
     public Duskblade(ToolMaterial toolMaterial) {
@@ -29,9 +28,9 @@ public class Duskblade extends SwordItem {
     @Override
     public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
         super.appendTooltip(stack, world, tooltip, context);
-        tooltip.add(new TranslatableText("item.wjsweapons.db_subtext_1").formatted(Formatting.GRAY));
-        tooltip.add(new TranslatableText("item.wjsweapons.db_subtext_2").formatted(Formatting.GRAY));
-        tooltip.add(new TranslatableText("item.wjsweapons.db_subtext_3").formatted(Formatting.GRAY));
+        tooltip.add(Text.translatable("item.wjsweapons.db_subtext_1").formatted(Formatting.GRAY));
+        tooltip.add(Text.translatable("item.wjsweapons.db_subtext_2").formatted(Formatting.GRAY));
+        tooltip.add(Text.translatable("item.wjsweapons.db_subtext_3").formatted(Formatting.GRAY));
     }
 
     @Override
