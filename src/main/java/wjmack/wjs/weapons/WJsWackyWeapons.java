@@ -47,7 +47,7 @@ public class WJsWackyWeapons implements ModInitializer {
 
 	public static final Block CANAAN_BLOCK = new CanaanBlock(
 			net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings.of(Material.SOLID_ORGANIC)
-					.strength(0.5f, 0.5f).sounds(BlockSoundGroup.GRAVEL).ticksRandomly());
+					.strength(0.5f, 0.5f).sounds(BlockSoundGroup.GRAVEL));
 
 
 	@Override
