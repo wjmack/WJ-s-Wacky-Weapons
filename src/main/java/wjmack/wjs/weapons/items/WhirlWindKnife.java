@@ -15,12 +15,8 @@ import net.minecraft.util.Formatting;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
-import wjmack.wjs.weapons.components.EnergyComponent;
-import wjmack.wjs.weapons.components.InitComponent;
 import net.minecraft.client.item.TooltipContext;
-import net.minecraft.text.LiteralText;
 import net.minecraft.text.Text;
-import net.minecraft.text.TranslatableText;
 
 public class WhirlWindKnife extends SwordItem {
     public WhirlWindKnife(ToolMaterial toolMaterial) {
@@ -30,11 +26,10 @@ public class WhirlWindKnife extends SwordItem {
     @Override
     public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
         super.appendTooltip(stack, world, tooltip, context);
-        tooltip.add(new TranslatableText("item.wjsweapons.knife_subtext_1").formatted(Formatting.GRAY));
-        tooltip.add(new TranslatableText("item.wjsweapons.knife_subtext_2").formatted(Formatting.GRAY));
-        tooltip.add(new TranslatableText("item.wjsweapons.knife_subtext_3").formatted(Formatting.GRAY));
-        tooltip.add(new TranslatableText("item.wjsweapons.knife_subtext_4").formatted(Formatting.GRAY));
-        tooltip.add(new LiteralText("" + InitComponent.ENERGY.get(stack).getEnergyValue()).formatted(Formatting.GRAY));
+        tooltip.add(Text.translatable("item.wjsweapons.knife_subtext_1").formatted(Formatting.GRAY));
+        tooltip.add(Text.translatable("item.wjsweapons.knife_subtext_2").formatted(Formatting.GRAY));
+        tooltip.add(Text.translatable("item.wjsweapons.knife_subtext_3").formatted(Formatting.GRAY));
+        tooltip.add(Text.translatable("item.wjsweapons.knife_subtext_4").formatted(Formatting.GRAY));
     }
 
     @Override
@@ -51,11 +46,6 @@ public class WhirlWindKnife extends SwordItem {
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity playerEntity, Hand hand) {
         ItemStack knife = playerEntity.getStackInHand(hand);
-        EnergyComponent knifeComponent = InitComponent.ENERGY.get(knife);
-        if (knifeComponent.getEnergyValue() - 10 < 0) {
-            return TypedActionResult.success(playerEntity.getStackInHand(hand));
-        }
-        knifeComponent.subtractFromEnergy(10);
         double userVelX = playerEntity.getRotationVec(0).x;
         double userVelY = playerEntity.getRotationVec(0).y;
         double userVelZ = playerEntity.getRotationVec(0).z;

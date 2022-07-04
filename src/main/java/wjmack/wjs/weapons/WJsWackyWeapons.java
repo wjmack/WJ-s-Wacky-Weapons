@@ -2,6 +2,7 @@ package wjmack.wjs.weapons;
 
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
+import net.fabricmc.fabric.api.renderer.v1.model.FabricBakedModel;
 import net.minecraft.block.Block;
 import net.minecraft.block.Material;
 import net.minecraft.entity.EquipmentSlot;
@@ -46,7 +47,8 @@ public class WJsWackyWeapons implements ModInitializer {
 
 	public static final Block CANAAN_BLOCK = new CanaanBlock(
 			net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings.of(Material.SOLID_ORGANIC)
-					.strength(0.5f, 0.5f).sounds(BlockSoundGroup.GRAVEL).breakByHand(true));
+					.strength(0.5f, 0.5f).sounds(BlockSoundGroup.GRAVEL).ticksRandomly());
+
 
 	@Override
 	public void onInitialize() {
