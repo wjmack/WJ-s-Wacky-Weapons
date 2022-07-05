@@ -13,6 +13,7 @@ import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+import wjmack.wjs.weapons.access.PlayerEntityMixinAccessor;
 
 @Mixin(ServerPlayerEntity.class)
 public abstract class ServerPlayerEntityMixin {
@@ -28,7 +29,7 @@ public abstract class ServerPlayerEntityMixin {
         ItemStack equippedStack = player.getEquippedStack(EquipmentSlot.MAINHAND);
         ItemStack feetStack = player.getEquippedStack(EquipmentSlot.FEET);
 
-        if (player.hasNoGravity() || equippedStack.getItem().equals(WJsWackyWeapons.WHIRLWIND_KNIFE) || (feetStack.getItem().equals(WJsWackyWeapons.ROCKET_BOOTS)) && ((LivingEntity) player).airStrafingSpeed == 0.02) {
+        if (player.hasNoGravity() || equippedStack.getItem().equals(WJsWackyWeapons.WHIRLWIND_KNIFE) || feetStack.getItem().equals(WJsWackyWeapons.ROCKET_BOOTS)) {
             player.handleFall(0, true);
         }
     }

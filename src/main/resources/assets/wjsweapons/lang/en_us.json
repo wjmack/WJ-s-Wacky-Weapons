@@ -34,5 +34,7 @@
     "item.wjsweapons.rocket_boots": "§6Rocket Boots",
     "item.wjsweapons.rb_subtext_1": "Allows flight by holding down the jump key",
     "item.wjsweapons.rb_subtext_2": "User travels 2.5x faster in the air when worn",
+    "item.wjsweapons.hawking_watch": "§3Hawking's Pocket Watch",
+    "item.wjsweapons.hw_subtext_1": "Right-click to travel back in time by 3 seconds",
     "block.wjsweapons.canaan_block": "Canaan Block"
 }

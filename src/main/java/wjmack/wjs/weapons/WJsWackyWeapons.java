@@ -2,7 +2,7 @@ package wjmack.wjs.weapons;
 
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
-import net.fabricmc.fabric.api.renderer.v1.model.FabricBakedModel;
+import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Material;
 import net.minecraft.entity.EquipmentSlot;
@@ -30,6 +30,7 @@ public class WJsWackyWeapons implements ModInitializer {
 	public static final ToolItem DAWNBREAKER = new Dawnbreaker(new WeaponsMat());
 	public static final ToolItem DUSKBLADE = new Duskblade(new WeaponsMat());
 	public static final ToolItem FLAMIN_HOT_PICKAXE = new FlaminHotPick(new PickaxeMat());
+	public static final Item HAWKING_WATCH = new HawkingWatch(new FabricItemSettings().group(ItemGroup.MISC).maxCount(1));
 	public static final ArmorItem GUARD_HELMET = new GuardHelmet(new GuardMat(), EquipmentSlot.HEAD);
 	public static final ArmorItem SPACE_HELMET = new SpaceHelmet(new SpaceMat(), EquipmentSlot.HEAD);
 	public static final ArmorItem ROCKET_BOOTS = new RocketBoots(new SpaceMat(), EquipmentSlot.FEET);
@@ -59,6 +60,8 @@ public class WJsWackyWeapons implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "duskblade"), DUSKBLADE);
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "flamin_hot_pickaxe"), FLAMIN_HOT_PICKAXE);
 
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "hawking_watch"), HAWKING_WATCH);
+
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "canaan_block"),
 				new BlockItem(CANAAN_BLOCK, new Item.Settings().group(ItemGroup.DECORATIONS)));
 
@@ -72,7 +75,7 @@ public class WJsWackyWeapons implements ModInitializer {
 		Registry.register(Registry.SOUND_EVENT, WJsWackyWeapons.ROCKET_ID, ROCKET);
 		Registry.register(Registry.SOUND_EVENT, WJsWackyWeapons.CANAAN_ID, CANAAN);
 
-		ClientPlayNetworking.registerGlobalReceiver(new Identifier("wjswackyweapons", "rocket_boots_packet"),
+		/*ClientPlayNetworking.registerGlobalReceiver(new Identifier("wjswackyweapons", "rocket_boots_packet"),
 				(client, handler, buf, responseSender) -> {
 					BlockPos player = buf.readBlockPos();
 
@@ -80,7 +83,7 @@ public class WJsWackyWeapons implements ModInitializer {
 						client.world.addParticle(ParticleTypes.FLAME, player.getX(), player.getY(), player.getZ(), 0F,
 								-0.5F, 0F);
 					});
-				});
+				});*/
 
 		LOGGER.info("Hello Fabric world!");
 
